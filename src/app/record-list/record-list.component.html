@@ -1,0 +1,29 @@
+<ng-container *ngIf="pleaseWaitMessage">
+  Please wait while we are getting user details...
+</ng-container>
+
+<div *ngIf="Displaytable" class="tab-row">
+  <div class="tableHeader">Firstname</div>
+  <div class="tableHeader">Lastname</div>
+  <div class="tableHeader">Avatar</div>
+  <div class="tableHeader-border">Action</div>
+
+  <div *ngFor="let record of useri?.data" class="tab-row">
+    
+    <div class="tableCell">{{record.first_name}}</div>
+    <div class="tableCell">{{record.last_name}}</div>
+    <div class="tableCell"><img src="{{record.avatar}}" height="40px" width="40px" /></div>
+    <div class="tableCell-border"><a style="color: rgb(68, 67, 67);" routerLink="/record-list/{{record.id}}">Edit</a> | <a style="color: rgb(68, 67, 67);" (click)="delete(record)">Delete</a></div>
+  </div>
+</div>
+
+<div class="btns">
+  <ng-container *ngIf="Displaytable">
+    <ng-container *ngFor="let number of array">
+      <button (click)="showDataPage(number)" [ngClass]="{'btnPress': Displaytable && number == useri.page}" class="btnstyle  btn btn-default">{{number}}</button>&nbsp;
+    </ng-container> &nbsp;
+  </ng-container>
+  <ng-container *ngIf="fetchData">
+    Fetching Data...
+  </ng-container>
+</div>

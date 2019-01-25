@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <h5 style="font-weight: bold;" *ngIf="show">Add Users</h5>
+      <h5 style="font-weight: bold;" *ngIf="!show" >Edit User</h5><br/>
+
+      <div class="form-group">
+        <label>First name:</label>
+        <input type="text" class="form-control" placeholder="Enter first name" [ngModel]="displayData?.data.first_name">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Last name:</label>
+        <input type="text" class="form-control" placeholder="Enter last name"  [ngModel]="displayData?.data.last_name">
+      </div>
+    </div>
+    <div class="col-md-12" *ngIf="!show">
+        <div class="form-group">
+          <label>Avatar:</label><br/>
+          <img src="{{displayData?.data.avatar}}" height="100px" width="100px" />
+        </div>
+      </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <button class="btnsubmit btn btn-default">Submit</button>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <button class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

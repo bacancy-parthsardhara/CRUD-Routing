@@ -1,0 +1,19 @@
+.btnsubmit{
+    background-color:#b9b4b4;
+    color: white;
+}
+
+
+
+
+/* // console.log("dsds", response);
+// this.displayData = this.displayData[id];
+
+// console.log("inside ", this.displayData);
+// this.avatar1 = this.ShowData.data.avatar;
+// console.log(this.avatar1);
+
+// const id = this.activatedRoute.snapshot.paramMap.get('id');
+// if (id === "new") {
+//   this.show = true;
+// } */

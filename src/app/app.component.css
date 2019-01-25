@@ -1,0 +1,12 @@
+.mainclass{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.recordList,.addRecord{
+    color: gray;
+}
+.active{
+    text-decoration: none;
+    color: black;
+}

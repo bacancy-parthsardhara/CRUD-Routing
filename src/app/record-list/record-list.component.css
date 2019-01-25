@@ -1,0 +1,49 @@
+.tab-row {
+    float: left;
+    width: 1200px;
+}   
+.tableHeader {
+    border:  solid #708090;
+    float: left;
+    padding: 10px;
+    width: 20%;
+    font-weight: bold;
+    border-width:0.5px 0 0.5px 0.5px; 
+}
+.tableHeader-border{
+        border:  solid #708090;
+        float: left;
+        padding: 10px;
+        width: 20%;
+        font-weight: bold;
+        border-width: 0.5px;
+}
+.tableCell{
+        border: solid #708090;
+        float: left;
+        padding: 10px;
+        width: 20%;
+        height: 60px;
+        border-width: 0 0 0.5px 0.5px;
+}
+.tableCell-border{
+        border: solid #708090;
+        float: left;
+        padding: 10px;
+        width: 20%;
+        height: 60px;
+        border-width: 0 0.5px 0.5px 0.5px ;
+}
+
+.btns{
+    float: left;
+    margin-top: 10px;
+}
+.btnstyle:hover{
+    background-color:#b9b4b4;
+}
+
+.btnPress{
+    background-color:rgb(107, 107, 114);
+    color: white;    
+}
