@@ -1,8 +1,8 @@
-<ng-container *ngIf="pleaseWaitMessage">
+<ng-container *ngIf="useri==null">
 {{firstMessage}}
 </ng-container>
 
-<div *ngIf="!pleaseWaitMessage" class="tab-row">
+<div *ngIf="useri" class="tab-row">
   <div class="tableHeader">Firstname</div>
   <div class="tableHeader">Lastname</div>
   <div class="tableHeader">Avatar</div>
@@ -18,9 +18,9 @@
 </div>
 
 <div class="btns">
-  <ng-container *ngIf="!pleaseWaitMessage">
+  <ng-container *ngIf="useri">
     <ng-container *ngFor="let number of array">
-      <button (click)="showDataPage(number)" [ngClass]="{'btnPress': !pleaseWaitMessage && number == useri.page}" class="btnstyle  btn btn-default">{{number}}</button>&nbsp;
+      <button (click)="showDataPage(number)" [ngClass]="{'btnPress': useri && number == useri.page}" class="btnstyle  btn btn-default">{{number}}</button>&nbsp;
     </ng-container> &nbsp;
   </ng-container>
   <ng-container *ngIf="fetchData">

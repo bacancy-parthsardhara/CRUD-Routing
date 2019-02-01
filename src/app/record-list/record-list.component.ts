@@ -12,7 +12,7 @@ export class RecordListComponent implements OnInit {
   useri: UserDataInterface;
   array: any = [];
 
-  pleaseWaitMessage: boolean = false;
+  // pleaseWaitMessage: boolean = false;
   fetchData: boolean = false;
   // Displaytable: boolean = false;
 
@@ -22,7 +22,7 @@ export class RecordListComponent implements OnInit {
 
   showDataPage(pageNo) {
     if (pageNo == null) {
-      this.pleaseWaitMessage = true;
+      // this.pleaseWaitMessage = false;
       this.CrudService.getdata(1).subscribe(response => {
         this.useri = response
         for (let i = 0; i < this.useri.total_pages; i++) {
@@ -30,7 +30,7 @@ export class RecordListComponent implements OnInit {
         }
         // console.log(this.array);
         this.fetchData = false;
-        this.pleaseWaitMessage = false;
+        // this.pleaseWaitMessage = true;
         // this.Displaytable = true;
       }, () => {
         this.firstMessage = "Please check your connection..."
@@ -46,7 +46,7 @@ export class RecordListComponent implements OnInit {
         this.CrudService.getdata(pageNo).subscribe(response => {
           this.useri = response
           this.fetchData = false;
-          this.pleaseWaitMessage = false;
+          // this.pleaseWaitMessage = true;
         });
       }
     }
