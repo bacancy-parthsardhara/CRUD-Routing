@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RecordListComponent } from './record-list.component';
 
 describe('RecordListComponent', () => {

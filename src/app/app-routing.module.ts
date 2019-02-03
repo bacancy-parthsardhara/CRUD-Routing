@@ -21,6 +21,7 @@ const routes: Routes = [
   //   path: 'record-list/new',
   //   component: AddRecordComponent
   // },
+  
   {
     path: 'record-list/:id',
     component: AddRecordComponent

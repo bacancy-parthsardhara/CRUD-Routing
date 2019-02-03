@@ -53,6 +53,7 @@ export class RecordListComponent implements OnInit {
     }
   }
 
+  
   delete(post): void {
     console.log("post", post);
     this.CrudService.delete(post).subscribe(() => {

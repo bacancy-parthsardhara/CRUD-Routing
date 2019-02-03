@@ -23,3 +23,4 @@ describe('AddRecordComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
