@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from "../crud.service";
 import { UserDataInterface } from "../listinterface";
 
+
 @Component({
   selector: 'app-record-list',
   templateUrl: './record-list.component.html',
