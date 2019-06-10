@@ -1,38 +1,34 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Observable, throwError } from "rxjs";
+import { retry, catchError } from "rxjs/operators";
 import { Listinterface, UserDataInterface } from "./listinterface";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class CrudService {
+  private url = "https://reqres.in/";
 
-  private url = 'https://reqres.in/';
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getdata(pageNo): Observable<UserDataInterface> {
-    return this.httpClient.get<UserDataInterface>(this.url + "api/users?page=" + pageNo)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.httpClient
+      .get<UserDataInterface>(this.url + "api/users?page=" + pageNo)
+      .pipe(catchError(this.handleError));
   }
   getEditData(id): Observable<Listinterface> {
     return this.httpClient.get<Listinterface>(this.url + "api/users/" + id);
   }
 
-
-  handleError(error)
- {
+  handleError(error) {
     return throwError(error);
   }
 
   edit(post) {
     return this.httpClient.put(this.url + "api/users" + post.id, {
-      "FirstName": "Parth",
-      "LastName": "Sardhara"
+      FirstName: "Parth",
+      LastName: "Sardhara"
     });
   }
 
